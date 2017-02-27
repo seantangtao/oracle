@@ -1,0 +1,42 @@
+   backup tablespace tbs2
+   md_backup 
+
+
+
+
+
+4 CREATE DISKGROUP D6
+
+
+ORA-15173: entry 'ff' does not exist in directory '/'
+
+
+
+
+
+
+md_restore -b /u01/ff -t nodg -g D6
+Current Diskgroup being restored: D6
+System template ASM_STALE modified!
+System template CONTROLFILE modified!
+System template CHANGETRACKING modified!
+System template TEMPFILE modified!
+System template ONLINELOG modified!
+System template DUMPSET modified!
+System template FLASHBACK modified!
+System template DATAFILE modified!
+System template XTRANSPORT modified!
+System template DATAGUARDCONFIG modified!
+System template PARAMETERFILE modified!
+System template BACKUPSET modified!
+System template ARCHIVELOG modified!
+System template AUTOBACKUP modified!
+Directory +D6/ff re-created!
+
+
+
+
+6 RMAN RESTORE 
+  recover ok
+
+
